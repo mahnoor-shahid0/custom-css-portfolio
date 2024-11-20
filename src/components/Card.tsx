@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import Image from 'next/image';
 import "../app/styles/card.css";
@@ -12,9 +11,9 @@ interface propsType {
 
 const Card: React.FC<propsType> = ({ title, desc, img, tags }) => {
   return (
-    <div className={`card ${window.innerWidth >= 640 ? `card-sm` : ''}`} data-aos="zoom-in-up">
+    <div className={`sm:card card-sm`} data-aos="zoom-in-up">
     <div>
-        <Image className={`card-image ${window.innerWidth >= 640 ? `card-image-sm` : ''}`} 
+        <Image className={`sm:card-image card-image-sm`} 
         src={img}
         width={350}
         height={350}
